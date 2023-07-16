@@ -1,0 +1,229 @@
+% arara: pdflatex
+\documentclass[12pt]{article}
+
+
+% если не менять дизайн, то поправить надо только 
+% \newcommand{\tour}{...}
+% и 
+% \newcommand{\blockofjudges}{...}
+
+\newcommand{\tour}{ФМТ тест-драйв} % номер тура
+
+\newcommand{\blockofjudges}{
+
+% table x
+% \protocol{where}{team-a}{team-b}{top judge}{more judges} % comment
+
+% empty var
+\protocol{}{}{}{}{} % comment
+
+\protocol{}{}{}{Лиза Моисеева}{} % comment
+\protocol{}{}{}{Артем Майдуров}{} % comment
+\protocol{}{}{}{Макс Федянов}{} % comment
+\protocol{}{}{}{Ваня Адо}{} % comment
+\protocol{}{}{}{Ян Шапиро}{} % comment
+\protocol{}{}{}{Влад Суров}{} % comment
+
+
+
+
+% % table 1
+% \protocol{}{$\delta$}{$\chi$}{Ваня Адо}{Леша Смолянинов, Роберт Гринштейн} % ф = Ваня
+
+% % table 2
+% \protocol{}{$\alpha$}{$\eta$}{Боря Демешев}{Игорь Скрипко, Вадим Тимергалеев}  % ф = Игорь Скрипко
+
+% % table 3
+% \protocol{}{$o$}{$\tau$}{Ваня Карлов}{Егор Адиятов, Боря Дураков} % ф = Боря Дураков 
+
+% % table 4
+% \protocol{}{$\beta$}{$\iota$}{Антон Шейкин}{Миша Трапезников, Ирина Поликарпова} % ф
+
+% % table 5
+% \protocol{}{$\theta$}{$\lambda$}{Ваня Трофимов}{Артем Майдуров, Полина Смирнова} % ф Полина Смирнова (!!)
+
+% % table 6
+% \protocol{}{$\rho$}{$\sigma$}{Вика Луковская}{Максим Федянов, Лиза Моисеева} %
+
+% % table 7
+% \protocol{}{$\kappa$}{$\nu$}{Тая Житина}{Миша Красков, Влада Синицына} % ф = Макс 
+
+% % table 8
+% \protocol{}{$\varphi$}{$\psi$}{Лев Каминский}{Даня Снегур} % ф = Даня
+
+% % table 9 
+% \protocol{}{$\xi$}{$\omega$}{Марк Прокушкин}{Настя Андреева} % ф = Марк
+
+% % table 10
+% \protocol{}{$\mu$}{$\pi$}{Миша Шишацкий}{Ян Шапиро} % ф = Миша
+
+% % table 11
+% \protocol{}{$\gamma$}{$\varepsilon$}{Владимир Мезенцев}{Ярослав Федулов, Андрей Мордасевич} % ф = Мезенцев
+
+
+% % table 12
+% \protocol{}{$\gamma$}{$\varepsilon$}{Владимир Мезенцев}{Ярослав Федулов, Андрей Мордасевич} % ф = Мезенцев
+}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tikzsymbols}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\geometry{top=0.5cm}
+\geometry{bottom=0.5cm}
+\geometry{left=1cm}
+\geometry{right=1cm}
+\pagestyle{empty}
+
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\newcommand{\myrotcell}[1]{\rotcell{\makebox[0pt][l]{#1}}}
+
+
+\newcommand{\protocol}[5]{
+\begin{minipage}{.2\textwidth}
+    \begin{center}
+    \includegraphics[width=0.48\textwidth]{klshlogo.pdf}
+    \end{center}
+\end{minipage}
+\begin{minipage}{.6\textwidth}
+    \begin{flushleft}
+    \textbf{Старший судья}: #4\\ 
+    \textbf{Судьи}: #5 \\ 
+    \textbf{Аудитория}: #1 \\ 
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}{.2\textwidth}
+    \begin{flushleft}
+        {\Large\textbf{\tour}} \\
+        \textbf{Команды}: #2 --- #3 
+    \end{flushleft}
+\end{minipage}
+
+
+\vspace*{0.2cm}
+\begin{tabular}{ | M{0.4cm} | M{2cm} | M{6.1cm} | M{0.8cm} | M{0.8cm} | M{0.5cm} | M{6.1cm} |}
+    \hline
+    \Smiley[1.6] & Время & Ответ и игрок #2 & балл #2 & балл #3 & \tiny{ $\times$ $\leftarrow$ $\rightarrow$} & Ответ и игрок #3 \\
+    \hline
+    \rotatebox{90}{Задача 1\hspace*{1cm}} & & & & & & \\ [2.1cm]
+    \hline
+    \rotatebox{90}{Задача 2\hspace*{1cm}} & & & & & & \\ [2.1cm]
+    \hline
+    \rotatebox{90}{Задача 3\hspace*{1cm}} & & & & & & \\ [2.1cm]
+    \hline
+    \rotatebox{90}{Задача 4\hspace*{1cm}} & & & & & & \\ [2.1cm]
+    \hline
+\end{tabular}
+
+\vspace*{0.25cm} 
+
+\begin{minipage}{.42\textwidth}
+
+%Условные значки: \\
+$\times$ задача снята \\
+$\rightarrow$ переход от #2 к #3 \\
+$\leftarrow$ переход от #3 к #2 \\
+
+\begin{tabular}{ | m{5cm} | M{1cm} | M{1cm} |}
+\hline
+\textbf{} & #2 & #3 \\
+\hline
+Вольные стрелки & & \\ [0.8cm]
+\hline
+Итог основного этапа & & \\ [0.8cm]
+\hline 
+\end{tabular}
+
+\vspace*{1cm}
+\textbf{Подписи команд:}\dotfill\\
+
+\vspace*{0.5cm}
+\textbf{Подписи судей:}\dotfill\\
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{.55\textwidth}
+\begin{tabular}{ | m{5cm} | M{2.3cm} | M{2.3cm} |}
+\hline
+\textbf{Этап обмена ударами} & #2 & #3 \\
+\hline 
+\vspace*{0.4cm}Решение задачи соперника\vspace*{1cm} Докладчик & & \\ [1.6cm]
+\hline
+Штраф за незнание & & \\ [0.6cm]
+\hline
+Дисциплинарный штраф & & \\ [0.6cm]
+\hline
+Красота обменной задачи & & \\ [0.6cm]
+\hline
+\textbf{Итоговый счёт} & & \\ [0.6cm]
+\hline
+\end{tabular}
+\end{minipage}
+\newpage
+}
+
+
+\setlength\parindent{0pt}
+\begin{document}
+
+
+\blockofjudges
+
+\renewcommand{\protocol}[5]{
+    #2 — #3 & #1 \\ 
+    \hline 
+}
+
+{\Huge 
+\begin{center}
+   \bf \tour \\
+    \vspace{3cm}
+    \begin{tabular}{| M{6cm} | M{6cm} |}
+    \hline
+    Команды & Аудитория\\ 
+    \hline
+    \blockofjudges
+    \end{tabular}
+    \end{center}
+}
+
+\newpage
+\renewcommand{\protocol}[5]{
+    #2 — #3 & #1 & #4, #5\\ 
+    \hline 
+}
+
+{\Large
+\begin{center}
+   \bf \tour \\
+    \vspace{3cm}
+    \begin{tabular}{| c | c | M{10cm}|}
+    \hline
+    Команды & Аудитория\\ 
+    \hline
+    \blockofjudges
+    \end{tabular}
+    \end{center}
+}
+
+
+\end{document}
+
+
