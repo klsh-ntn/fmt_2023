@@ -1,0 +1,308 @@
+% arara: xelatex
+\documentclass[12pt]{article}
+
+% если не менять дизайн, то поправить надо только 
+% \newcommand{\tour}{...}
+% и 
+% \newcommand{\blockofjudges}{...}
+
+\newcommand{\tour}{ФМТ тур 2} % номер тура
+
+\newcommand{\blockofjudges}{
+
+% table x
+% \protocol{where}{team-a}{team-b}{top judge}{more judges} % comment
+
+
+% физики:
+% Ваня Адо, Коля Гулицкий, Миша Красков, Лёша Острый,
+% Марк Прокушкин, Даня Снегур, Влад Суров, Макс Федянов, Антон Шейкин, 
+% Егор Скуровкин(з), Рома Лисин(з), Тимофей Спрыжков(з), Михаил Торшин(з), Слава Шестаков(з), Кристина Шидловская(з)
+% Лёша Островский (со второй половины)
+
+% запреты
+% \alpha, Ваня Адо
+% \beta, Ян Шапиро, Анжелика Иванушкина 
+% \gamma, Марк Прокушкин 
+% \delta, Тоня Шарковская
+% \epsilon, Коля Гулицкий
+% \zeta, Алина Рыженкова
+% \eta, Миша Красков, Рома Лисин
+% \theta, Саша Тимошков, Макс Федянов
+% \iota, Влад Суров
+% \kappa
+% \lambda, Лиза Моисеева, Слава Шестаков
+% \mu, Миша Торшин
+% \nu, Кристина Шидловская
+% \xi, Максим Брюшинин
+% o, Серёжа Ламзин, Катя Шумова
+% \pi, Леша Острый
+% \rho, Тима Спрыжков
+% \sigma, Леша Островский
+% \tau
+% \upsilon, Артём Майдуров
+% \phi, Катя Алёшечкина
+% \chi, Даня Снегур
+% \psi, Ира Клопова-Сапоровская, Дима Веселовский
+% \omega, Саша Акантьев, Егор Скурковин
+
+\let\F\relax
+\newcommand{\F}{} % метка для физиков
+
+% table 1
+\protocol{3.1}
+{$\gamma$ % Марк Прокушкин
+}{$\eta$ % Миша Красков, Рома Лисин
+}{Ваня Адо\F}{Саша Акантьев, Катя Шумова} 
+
+% table 2
+\protocol{3.2}
+{$\chi$ % Даня Снегур
+}{$\iota$ % Влад Суров
+}{Серёжа Ламзин}{Анжелика Иванушкина, Егор Скурковин\F}  
+
+% table 3
+\protocol{1.1}
+{$\alpha$ % Ваня Адо
+}{$\lambda$ % Лиза Моисеева, Слава Шестаков
+}{Антон Шейкин\F}{Ира Клопова-Сапоровская\F, Катя Алёшечкина}  
+
+% table 4
+\protocol{1.2}
+{$\nu$ % Кристина Шидловская
+}{$\pi$ % Леша Острый
+}{Боря Демешев}{Тимофей Спрыжков\F, Настя Романчук} 
+
+% table 5
+\protocol{2.1}
+{$\beta$ %  Ян Шапиро, Анжелика Иванушкина 
+}{$\theta$ % Саша Тимошков, Макс Федянов
+}{Артём Майдуров}{Максим Брюшинин, Коля Гулицкий\F} % 
+
+% table 6
+\protocol{2.2}
+{$\upsilon$ % Артём Майдуров
+}{$\kappa$ %
+}{Макс Федянов\F}{Ваня Карлов, Рома Лисин\F} %
+
+% table 7
+\protocol{4.1}
+{$\tau$ % Леша Острый
+}{$\phi$ % Катя Алёшечкина
+}{Марк Прокушкин\F}{Вика Луковская, Александр Тимошков} %  
+
+% table 8
+\protocol{ВК}
+{$\psi$ % Ира Клопова-Сапоровская, Дима Веселовский
+}{$\omega$ % Саша Акантьев, Егор Скурковин
+}{Миша Красков\F}{Слава Шестаков\F} % 
+
+% table 9 
+\protocol{Пионерка}
+{$\delta$ % Тоня Шарковская
+}{$\epsilon$ % Коля Гулицкий
+}{Влад Суров\F}{Лёша Острый\F, Алина Рыженкова} % 
+
+% table 10
+\protocol{Ио}
+{$\xi$ % Максим Брюшинин
+}{$o$ % Серёжа Ламзин, Катя Шумова
+}{Лиза Моисеева}{Дима Веселовский, Михаил Торшин\F} % 
+
+% table 11
+\protocol{Каллисто}
+{$\zeta$ % Алина Рыженкова
+}{$\mu$ % Миша Торшин
+}{Ян Шапиро}{Кристина Шидловская\F} % 
+
+% table 12
+\protocol{Ганимед}
+{$\rho$ % Тима Спрыжков
+}{$\sigma$ % Леша Островский
+}{Даня Снегур\F}{Тоня Шарковская} % 
+}
+
+
+
+\usepackage{fontspec} % поддержка разных шрифтов
+\usepackage{polyglossia} % поддержка разных языков
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+\setmainfont{Linux Libertine O} % выбираем шрифт
+% можно также попробовать Helvetica, Arial, Cambria и т.Д.
+
+% чтобы использовать шрифт Linux Libertine на личном компе,
+% его надо предварительно скачать по ссылке
+% http://www.linuxlibertine.org/
+
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+% пояснение зачем нужно шаманство с \newfontfamily
+% http://tex.stackexchange.com/questions/91507/
+
+
+
+
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tikzsymbols}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\geometry{top=0.5cm}
+\geometry{bottom=0.5cm}
+\geometry{left=1cm}
+\geometry{right=1cm}
+\pagestyle{empty}
+
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\newcommand{\myrotcell}[1]{\rotcell{\makebox[0pt][l]{#1}}}
+
+
+\newcommand{\protocol}[5]{
+\begin{minipage}{.2\textwidth}
+    \begin{center}
+    \includegraphics[width=0.48\textwidth]{klshlogo.pdf}
+    \end{center}
+\end{minipage}
+\begin{minipage}{.6\textwidth}
+    \begin{flushleft}
+    \textbf{Старший судья}: #4\\ 
+    \textbf{Судьи}: #5 \\ 
+    \textbf{Аудитория}: #1 \\ 
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}{.2\textwidth}
+    \begin{flushleft}
+        {\Large\textbf{\tour}} \\
+        \textbf{Команды}: #2 — #3 
+    \end{flushleft}
+\end{minipage}
+
+
+\vspace*{0.2cm}
+\begin{tabular}{ | M{0.4cm} | M{2cm} | M{6.1cm} | M{0.8cm} | M{0.8cm} | M{0.5cm} | M{6.1cm} |}
+    \hline
+    \Smiley[1.6] & Время & Ответ и игрок #2 & балл #2 & балл #3 & \tiny{ $\times$ $\leftarrow$ $\rightarrow$} & Ответ и игрок #3 \\
+    \hline
+    \rotatebox{90}{Задача 1\hspace*{1cm}} & & & & & & \\ [2.1cm]
+    \hline
+    \rotatebox{90}{Задача 2\hspace*{1cm}} & & & & & & \\ [2.1cm]
+    \hline
+    \rotatebox{90}{Задача 3\hspace*{1cm}} & & & & & & \\ [2.1cm]
+    \hline
+    \rotatebox{90}{Задача 4\hspace*{1cm}} & & & & & & \\ [2.1cm]
+    \hline
+\end{tabular}
+
+\vspace*{0.25cm} 
+
+\begin{minipage}{.42\textwidth}
+
+%Условные значки: \\
+$\times$ задача снята \\
+$\rightarrow$ переход от #2 к #3 \\
+$\leftarrow$ переход от #3 к #2 \\
+
+\begin{tabular}{ | m{5cm} | M{1cm} | M{1cm} |}
+\hline
+\textbf{} & #2 & #3 \\
+\hline
+Вольные стрелки & & \\ [0.8cm]
+\hline
+Итог основного этапа & & \\ [0.8cm]
+\hline 
+\end{tabular}
+
+\vspace*{1cm}
+\textbf{Подписи команд:}\dotfill\\
+
+\vspace*{0.5cm}
+\textbf{Подписи судей:}\dotfill\\
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{.55\textwidth}
+\begin{tabular}{ | m{5cm} | M{2.3cm} | M{2.3cm} |}
+\hline
+\textbf{Этап обмена ударами} & #2 & #3 \\
+\hline 
+\vspace*{0.4cm}Балл за задачу соперников & & \\ [0.6cm]
+\hline
+\vspace*{0.4cm}Докладчик задачи & & \\ [0.5cm]
+соперников & & \\ [0.6cm]
+\hline
+Штраф за незнание & & \\ [0.6cm]
+\hline
+Дисциплинарный штраф & & \\ [0.6cm]
+\hline
+Красота обменной задачи & & \\ [0.6cm]
+\hline
+\textbf{Итоговый счёт} & & \\ [0.6cm]
+\hline
+\end{tabular}
+\end{minipage}
+\newpage
+}
+
+
+\setlength\parindent{0pt}
+\begin{document}
+
+
+\blockofjudges
+
+\renewcommand{\protocol}[5]{
+    #2 — #3 & #1 \\ 
+    \hline 
+}
+
+{\Huge 
+\begin{center}
+   \bf \tour \\
+    \vspace{3cm}
+    \begin{tabular}{| M{6cm} | M{6cm} |}
+    \hline
+    Команды & Аудитория\\ 
+    \hline
+    \blockofjudges
+    \end{tabular}
+    \end{center}
+}
+
+\newpage
+\renewcommand{\protocol}[5]{
+    #2 — #3 & #1 & #4, #5\\ 
+    \hline 
+}
+
+{\Large
+\begin{center}
+   \bf \tour \\
+    \vspace{3cm}
+    \begin{tabular}{| c | c | M{10cm}|}
+    \hline
+    Команды & Аудитория\\ 
+    \hline
+    \blockofjudges
+    \end{tabular}
+    \end{center}
+}
+
+
+\end{document}
+
+
